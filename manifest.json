@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Know Your Product",
+  "short_name": "KYP",
+  "version": "1.0",
+  "description": "Adds a chat window to ecommerce websites.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.walmart.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
